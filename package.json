@@ -1,0 +1,26 @@
+{
+  "name": "demoproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test/unit.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cavit-truefacet/DemoProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cavit-truefacet/DemoProject/issues"
+  },
+  "homepage": "https://github.com/cavit-truefacet/DemoProject#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
