@@ -1,0 +1,14 @@
+version: 0.1
+os: linux
+files:
+  - source: source
+    destination: /www/myApp
+hooks:
+  BeforeInstall:
+    - location: bin/before_install.sh
+  AfterInstall:
+    - location: bin/after_install.sh
+  ApplicationStart:
+    - location: bin/start.sh
+  ValidateService:
+    - location: bin/validate.sh

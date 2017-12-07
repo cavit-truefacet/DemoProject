@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "VALIDATE APP INSTALL IS COMPLETE SUCCESS"
