@@ -1,7 +1,6 @@
 version: 0.0
 os: linux
 files:
-  - source: source
     destination: /www/myApp
 hooks:
   BeforeInstall:
