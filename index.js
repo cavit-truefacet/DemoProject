@@ -2,12 +2,13 @@ const express = require('express')
 const app = express()
 const os = require('os')
 
-var starttime = Date.now()
-var healthCheck = Date.now()
-var healthy = true
+var ts = Date.now()
+var thc = Date.now()
+const dt = Math.random() * 600 + 300
+var healthy = dt < 600
 
 app.get('/', (req, res, next) => {
-    let t = (Date.now() - starttime) / 1000
+    let t = (Date.now() - ts) / 1000
     res.setHeader("Content-Type", 'text/plain'); //Solution!
     res.writeHead(200);
     res.end([
@@ -18,10 +19,9 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/health', (req, res) => {
-    let t = (Date.now() - healthCheck) / 1000
-    let d = Math.random() * 600 + 300
-    if(t > d){
-        healthCheck = Date.now()
+    let t = (Date.now() - thc) / 1000
+    if(t > dt){
+        thc = Date.now()
         healthy = !healthy
     }
     res.writeHead( healthy ? '200' : '500')
