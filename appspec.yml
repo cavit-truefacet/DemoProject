@@ -3,16 +3,16 @@ os: linux
 files:
     - source: /
     destination: /www/myApp
-# hooks:
-#   BeforeInstall:
-#     - location: bin/before_install.sh
-#     runas: root
-#   AfterInstall:
-#     - location: bin/after_install.sh
-#     runas: root
-#   ApplicationStart:
-#     - location: bin/start.sh
-#     runas: root
-#   ValidateService:
-#     - location: bin/validate.sh
-#     runas: root
+hooks:
+  BeforeInstall:
+    - location: bin/before_install.sh
+    runas: root
+  AfterInstall:
+    - location: bin/after_install.sh
+    runas: root
+  ApplicationStart:
+    - location: bin/start.sh
+    runas: root
+  ValidateService:
+    - location: bin/validate.sh
+    runas: root
