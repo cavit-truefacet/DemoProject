@@ -2,6 +2,8 @@
 
 echo "VALIDATE APP INSTALL IS SUCCESSFULL"
 
+sleep 3
+
 STATUS=`curl -sL -w "%{http_code}\\n" "http://localhost/health" -o /dev/null`
 if [ "$STATUS" -ne "200" ]; then
     echo "Not healty"

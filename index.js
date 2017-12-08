@@ -8,9 +8,13 @@ var healthy = true
 
 app.get('/', (req, res, next) => {
     let t = (Date.now() - starttime) / 1000
-    res.setHeader("Content-Type", 'text/html'); //Solution!
+    res.setHeader("Content-Type", 'text/plain'); //Solution!
     res.writeHead(200);
-    res.end('Hello visitor,<br>I have been here for ' + t + ' seconds!<br>' + os.hostname())
+    res.end([
+        'Hello visitor, I have been working for ' + t + ' seconds!',
+        'Host: '+ os.hostname(),
+        'Healthy: ' + (healthy ? 'yes' : 'NO')
+    ].join('\n'))
 })
 
 app.get('/health', (req, res) => {
