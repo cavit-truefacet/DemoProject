@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "START APP..."
+forever start index.js
