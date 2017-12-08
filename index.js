@@ -19,7 +19,8 @@ app.get('/', (req, res, next) => {
 
 app.get('/health', (req, res) => {
     let t = (Date.now() - healthCheck) / 1000
-    if(t > 120){
+    let d = Math.random() * 600 + 300
+    if(t > d){
         healthCheck = Date.now()
         healthy = !healthy
     }
