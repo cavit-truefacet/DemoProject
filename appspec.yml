@@ -5,14 +5,14 @@ files:
     destination: /www/myApp
 hooks:
   BeforeInstall:
-    - location: bin/before_install.sh
+  - location: bin/before_install.sh
     runas: root
   AfterInstall:
-    - location: bin/after_install.sh
+  - location: bin/after_install.sh
     runas: root
   ApplicationStart:
-    - location: bin/start.sh
+  - location: bin/start.sh
     runas: root
   ValidateService:
-    - location: bin/validate.sh
+  - location: bin/validate.sh
     runas: root
